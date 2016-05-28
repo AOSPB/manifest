@@ -506,7 +506,7 @@
   <project path="vendor/qcom/opensource/dpm" name="vendor_qcom_opensource_dpm" remote="aospb" />
 
   <!-- Slim toolchain gcc and linaro -->
-  <project path="prebuilt" name="prebuilt" remote="aospb" />
+  <project path="prebuilt" name="prebuilt" remote="aospb" revision="mm6.0" />
 
   <!-- SamsungServiceMode -->
   <project path="packages/apps/SamsungServiceMode" name="packages_apps_SamsungServiceMode" remote="aospb" />
