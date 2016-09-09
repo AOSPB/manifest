@@ -11,7 +11,7 @@
            fetch="https://github.com/AOSPB"
            revision="mm6.0" />
 
-  <default revision="refs/tags/android-6.0.1_r43"
+  <default revision="refs/tags/android-6.0.1_r61"
            remote="aosp"
            sync-j="4" />
 
@@ -19,9 +19,9 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
-  <project path="art" name="art" remote="aospb"  />
-  <project path="bionic" name="bionic" remote="aospb" />
-  <project path="bootable/recovery" name="bootable_recovery" remote="aospb" />
+  <project path="art" name="art" remote="aospb" groups="pdk" />
+  <project path="bionic" name="bionic" remote="aospb" groups="pdk" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="aospb" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
   <project path="developers/build" name="platform/developers/build" />
@@ -62,7 +62,7 @@
   <project path="external/ant-wireless/antradio-library" name="external_ant-wireless_antradio-library" remote="aospb" />
   <project path="external/apache-commons-math" name="platform/external/apache-commons-math" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/apache-harmony" name="platform/external/apache-harmony" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/apache-http" name="external_apache-http" remote="aospb" />
+  <project path="external/apache-http" name="external_apache-http" remote="aospb" groups="pdk" />
   <project path="external/apache-xml" name="platform/external/apache-xml" groups="pdk" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs,pdk-fs" />
@@ -91,7 +91,7 @@
   <project path="external/drm_gralloc" name="platform/external/drm_gralloc" groups="drm_gralloc" />
   <project path="external/drm_hwcomposer" name="platform/external/drm_hwcomposer" groups="drm_hwcomposer" />
   <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/e2fsprogs" name="external_e2fsprogs" groups="pdk" remote="aospb" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="aospb" groups="pdk" />
   <project path="external/easymock" name="platform/external/easymock" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" groups="pdk-cw-fs,pdk-fs" />
@@ -103,7 +103,7 @@
   <project path="external/exfat" name="external_exfat" remote="aospb" />
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <project path="external/eyes-free" name="platform/external/eyes-free" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/f2fs-tools" name="external_f2fs-tools" remote="aospb" />
+  <project path="external/f2fs-tools" name="external_f2fs-tools" remote="aospb" groups="pdk" />
   <project path="external/fdlibm" name="platform/external/fdlibm" groups="pdk" />
   <project path="external/fio" name="platform/external/fio" groups="pdk-fs" />
   <project path="external/flac" name="platform/external/flac" groups="pdk" />
@@ -161,8 +161,8 @@
   <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" />
   <project path="external/libmpeg2" name="platform/external/libmpeg2" groups="pdk" />
   <project path="external/libmtp" name="platform/external/libmtp" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/libnfc-nci" name="external_libnfc-nci" remote="aospb" />
-  <project path="external/libnfc-nxp" name="external_libnfc-nxp" remote="aospb" />
+  <project path="external/libnfc-nci" name="external_libnfc-nci" remote="aospb" groups="pdk" />
+  <project path="external/libnfc-nxp" name="external_libnfc-nxp" remote="aospb" groups="pdk" />
   <project path="external/libnl" name="platform/external/libnl" groups="pdk" />
   <project path="external/libogg" name="platform/external/libogg" groups="pdk" />
   <project path="external/libopus" name="platform/external/libopus" groups="pdk" />
@@ -214,7 +214,7 @@
   <project path="external/ntfs-3g" name="external_ntfs-3g" remote="aospb" />
   <project path="external/oauth" name="platform/external/oauth" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/objenesis" name="platform/external/objenesis" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/okhttp" name="external_okhttp" remote="aospb" />
+  <project path="external/okhttp" name="external_okhttp" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/opencv" name="platform/external/opencv" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/openfst" name="platform/external/openfst" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/openssh" name="platform/external/openssh" groups="pdk-cw-fs,pdk-fs" />
@@ -232,9 +232,9 @@
   <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />
   <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" />
   <project path="external/selinux" name="platform/external/selinux" groups="pdk" />
-  <project path="external/sepolicy" name="external_sepolicy" remote="aospb" />
+  <project path="external/sepolicy" name="external_sepolicy" remote="aospb" groups="pdk" />
   <project path="external/sfntly" name="platform/external/sfntly" groups="pdk,qcom_msm8x26" />
-  <project path="external/skia" name="external_skia" remote="aospb" />
+  <project path="external/skia" name="external_skia" remote="aospb" groups="pdk,qcom_msm8x26" />
   <project path="external/slf4j" name="platform/external/slf4j" groups="pdk-fs" />
   <project path="external/smali" name="platform/external/smali" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/sonic" name="platform/external/sonic" groups="pdk" />
@@ -248,8 +248,8 @@
   <project path="external/tagsoup" name="platform/external/tagsoup" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/tcpdump" name="platform/external/tcpdump" groups="pdk,pdk-cw-fs,pdk-fs" />
   <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/tinyalsa" name="external_tinyalsa" remote="aospb" />
-  <project path="external/tinycompress" name="external_tinycompress" remote="aospb" />
+  <project path="external/tinyalsa" name="external_tinyalsa" remote="aospb" groups="pdk" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="aospb" groups="pdk" />
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" />
   <project path="external/tinyxml2" name="platform/external/tinyxml2" groups="pdk" />
   <project path="external/toybox" name="platform/external/toybox" groups="pdk" />
@@ -261,14 +261,14 @@
   <project path="external/vogar" name="platform/external/vogar" groups="pdk" />
   <project path="external/webp" name="platform/external/webp" groups="pdk,qcom_msm8x26" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="aospb" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="aospb" groups="pdk" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/av" name="frameworks_av" remote="aospb" />
-  <project path="frameworks/base" name="frameworks_base" remote="aospb" />
+  <project path="frameworks/av" name="frameworks_av" remote="aospb" groups="pdk" />
+  <project path="frameworks/base" name="frameworks_base" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -277,9 +277,9 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/native" name="frameworks_native" remote="aospb" />
+  <project path="frameworks/native" name="frameworks_native" remote="aospb" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
-  <project path="frameworks/opt/bluetooth" name="frameworks_opt_bluetooth" remote="aospb" />
+  <project path="frameworks/opt/bluetooth" name="frameworks_opt_bluetooth" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/chips" name="platform/frameworks/opt/chips" groups="pdk-cw-fs,pdk-fs" />
@@ -291,10 +291,10 @@
   <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" groups="pdk-fs" />
   <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="aospb" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="aospb" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="aospb" groups="pdk" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="aospb" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="aospb" groups="pdk" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs,pdk-fs" />
@@ -305,8 +305,8 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs,pdk-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
-  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="aospb" />
-  <project path="hardware/broadcom/wlan" name="hardware_broadcom_wlan" remote="aospb" />
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="aospb" groups="pdk" />
+  <project path="hardware/broadcom/wlan" name="hardware_broadcom_wlan" remote="aospb" groups="pdk,broadcom_wlan" />
   <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" />
   <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" groups="intel" />
   <project path="hardware/intel/common/bd_prov" name="platform/hardware/intel/common/bd_prov" groups="intel" />
@@ -321,115 +321,116 @@
   <project path="hardware/intel/img/psb_headers" name="platform/hardware/intel/img/psb_headers" groups="intel" />
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" />
   <project path="hardware/intel/sensors" name="platform/hardware/intel/sensors" groups="intel_sensors" />
-  <project path="hardware/libhardware" name="hardware_libhardware" remote="aospb" />
-  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="aospb" />
+  <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="aospb" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="aospb" groups="pdk" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/mediatek" name="platform/hardware/mediatek" groups="mediatek,mediatek_wear" />
   <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
-  <project path="hardware/qcom/audio/default" name="hardware_qcom_audio" remote="aospb" />
-  <project path="hardware/qcom/audio-caf/apq8084" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8084" />
-  <project path="hardware/qcom/audio-caf/msm8916" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8916" />
-  <project path="hardware/qcom/audio-caf/msm8960" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8960" />
-  <project path="hardware/qcom/audio-caf/msm8974" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8974" />
-  <project path="hardware/qcom/audio-caf/msm8994" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8994" />
-  <project path="hardware/qcom/bt" name="hardware_qcom_bt" remote="aospb" />
-  <project path="hardware/qcom/bt-caf" name="hardware_qcom_bt" remote="aospb" revision="mm6.0-caf" />
-  <project path="hardware/qcom/camera" name="hardware_qcom_camera" remote="aospb" />
-  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="aospb" />
-  <project path="hardware/qcom/display-caf/apq8084" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8084" />
-  <project path="hardware/qcom/display-caf/msm8916" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8916" />
-  <project path="hardware/qcom/display-caf/msm8960" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8960" />
-  <project path="hardware/qcom/display-caf/msm8974" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8974" />
-  <project path="hardware/qcom/display-caf/msm8994" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8994" />
-  <project path="hardware/qcom/fm" name="hardware_qcom_fm" remote="aospb" />
-  <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="aospb" />
-  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="aospb" />
-  <project path="hardware/qcom/media/default" name="hardware_qcom_media" remote="aospb" />
-  <project path="hardware/qcom/media-caf/apq8084" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8084" />
-  <project path="hardware/qcom/media-caf/msm8916" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8916" />
-  <project path="hardware/qcom/media-caf/msm8960" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8960" />
-  <project path="hardware/qcom/media-caf/msm8974" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8974" />
-  <project path="hardware/qcom/media-caf/msm8994" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8994" />
+  <project path="hardware/qcom/audio/default" name="hardware_qcom_audio" remote="aospb" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/audio-caf/apq8084" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8084" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/audio-caf/msm8916" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8916" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8960" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/audio-caf/msm8974" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8974" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/audio-caf/msm8994" name="hardware_qcom_audio" remote="aospb" revision="mm6.0-caf-8994" groups="qcom,qcom_audio" />
+  <project path="hardware/qcom/bt" name="hardware_qcom_bt" remote="aospb" groups="qcom" />
+  <project path="hardware/qcom/bt-caf" name="hardware_qcom_bt" remote="aospb" revision="mm6.0-caf" groups="qcom" />
+  <project path="hardware/qcom/camera" name="hardware_qcom_camera" remote="aospb" groups="qcom" />
+  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="aospb" groups="pdk,qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/apq8084" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8084" groups="pdk,qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/msm8916" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8916" groups="pdk,qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/msm8960" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8960" groups="pdk,qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/msm8974" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8974" groups="pdk,qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/msm8994" name="hardware_qcom_display" remote="aospb" revision="mm6.0-caf-8994" groups="pdk,qcom,qcom_display" />
+  <project path="hardware/qcom/fm" name="hardware_qcom_fm" remote="aospb" groups="qcom" />
+  <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="aospb" groups="qcom,qcom_gps" />
+  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="aospb" groups="qcom,qcom_keymaster" />
+  <project path="hardware/qcom/media/default" name="hardware_qcom_media" remote="aospb" groups="qcom" />
+  <project path="hardware/qcom/media-caf/apq8084" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8084" groups="qcom" />
+  <project path="hardware/qcom/media-caf/msm8916" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8916" groups="qcom" />
+  <project path="hardware/qcom/media-caf/msm8960" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8960" groups="qcom" />
+  <project path="hardware/qcom/media-caf/msm8974" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8974" groups="qcom" />
+  <project path="hardware/qcom/media-caf/msm8994" name="hardware_qcom_media" remote="aospb" revision="mm6.0-caf-8994" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" groups="qcom_msm8994" />
   <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" groups="qcom_msm8x26" />
   <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" groups="qcom_msm8x27" />
   <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="pdk,qcom_msm8x74" />
   <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" groups="qcom_msm8x84" />
-  <project path="hardware/qcom/power" name="hardware_qcom_power" remote="aospb" />
+  <project path="hardware/qcom/power" name="hardware_qcom_power" remote="aospb" groups="qcom" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
-  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="aospb" />
-  <project path="hardware/qcom/wlan-caf" name="hardware_qcom_wlan" remote="aospb" revision="mm6.0-caf" />
-  <project path="hardware/ril" name="hardware_ril" remote="aospb" />
-  <project path="hardware/ril-caf" name="hardware_ril" remote="aospb" revision="mm6.0-caf" />
-  <project path="libcore" name="libcore" remote="aospb" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="aospb" groups="qcom_wlan" />
+  <project path="hardware/qcom/wlan-caf" name="hardware_qcom_wlan" remote="aospb" revision="mm6.0-caf" groups="qcom_wlan" />
+  <project path="hardware/ril" name="hardware_ril" remote="aospb" groups="pdk" />
+  <project path="hardware/ril-caf" name="hardware_ril" remote="aospb" revision="mm6.0-caf" groups="pdk" />
+  <project path="libcore" name="libcore" remote="aospb" groups="pdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
   <project path="ndk" name="platform/ndk" groups="generic_fs" />
-  <project path="packages/apps/BasicSmsReceiver" name="packages_apps_BasicSmsReceiver" remote="aospb" />
-  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="aospb" />
-  <project path="packages/apps/Browser" name="packages_apps_Browser" remote="aospb" />
+  <project path="packages/apps/BasicSmsReceiver" name="packages_apps_BasicSmsReceiver" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/Browser" name="packages_apps_Browser" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" groups="pdk-fs" />
-  <project path="packages/apps/Calendar" name="packages_apps_Calendar" remote="aospb" />
+  <project path="packages/apps/Calendar" name="packages_apps_Calendar" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" groups="pdk-fs" />
-  <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="aospb" />
-   <project path="packages/apps/CarrierConfig" name="platform/packages/apps/CarrierConfig" groups="pdk-fs" />
-  <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" remote="aospb" />
+  <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="aospb" groups="pdk-fs" />
+  <project path="packages/apps/CarrierConfig" name="platform/packages/apps/CarrierConfig" groups="pdk-fs" />
+  <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="aospb" />
-  <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" remote="aospb" />
-  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="aospb" />
-  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="aospb" />
-  <project path="packages/apps/Email" name="packages_apps_Email" remote="aospb" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="aospb" groups="pdk-fs" />
+  <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" remote="aospb" groups="pdk-fs" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="aospb" groups="pdk-fs" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="aospb" groups="pdk-fs" />
+  <project path="packages/apps/Email" name="packages_apps_Email" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/ExactCalculator" name="platform/packages/apps/ExactCalculator" groups="pdk-fs" />
-  <project path="packages/apps/Exchange" name="packages_apps_Exchange" remote="aospb" />
-  <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="aospb" />
+  <project path="packages/apps/Exchange" name="packages_apps_Exchange" remote="aospb" groups="pdk-fs" />
+  <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="pdk-fs" />
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="aospb" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" groups="pdk-fs" />
-  <project path="packages/apps/InCallUI" name="packages_apps_InCallUI" remote="aospb" />
+  <project path="packages/apps/InCallUI" name="packages_apps_InCallUI" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" groups="pdk-fs" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="aospb" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" groups="pdk-fs" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" />
-  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="aospb" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="pdk-fs" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="aospb" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" groups="pdk-fs" />
-  <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="aospb" />
-  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
-  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aospb" />
+  <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="pdk-fs" />
+  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" groups="pdk-fs" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aospb" groups="pdk-fs" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" groups="pdk-fs" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" groups="pdk-fs" />
-  <project path="packages/apps/Stk" name="packages_apps_Stk" remote="aospb" />
+  <project path="packages/apps/Stk" name="packages_apps_Stk" remote="aospb"  groups="apps_stk,pdk-fs" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" groups="pdk-fs" />
   <project path="packages/apps/Terminal" name="platform/packages/apps/Terminal" groups="pdk-fs" />
   <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" groups="generic_fs" />
-  <project path="packages/apps/UnifiedEmail" name="packages_apps_UnifiedEmail" remote="aospb" />
+  <project path="packages/apps/UnifiedEmail" name="packages_apps_UnifiedEmail" remote="aospb" groups="pdk-fs" />
   <project path="packages/experimental" name="platform/packages/experimental" />
-  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="aospb" />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="aospb" groups="pdk-fs" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" groups="pdk-fs" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" groups="pdk-fs" />
   <project path="packages/providers/BookmarkProvider" name="platform/packages/providers/BookmarkProvider" groups="pdk-fs" />
-  <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" groups="pdk-cw-fs" />
+  <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/providers/CallLogProvider" name="platform/packages/providers/CallLogProvider" groups="pdk-fs" />
-  <project path="packages/providers/ContactsProvider" name="packages_providers_ContactsProvider" remote="aospb" />
-  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="aospb" />
-  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="aospb" />
-  <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" />
-  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="aospb" />
+  <project path="packages/providers/ContactsProvider" name="packages_providers_ContactsProvider" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" groups="pdk-fs" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/providers/TvProvider" name="platform/packages/providers/TvProvider" groups="pdk-fs" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" groups="pdk-fs" />
   <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" groups="pdk-fs" />
   <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" groups="pdk-fs" />
-  <project path="packages/services/Mms" name="packages_services_Mms" remote="aospb" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="aospb" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="aospb" />
+  <project path="packages/services/Mms" name="packages_services_Mms" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="aospb" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" groups="pdk-fs" />
   <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" groups="pdk-fs" />
   <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" groups="pdk-fs" />
@@ -466,22 +467,22 @@
   <project path="prebuilts/maven_repo/android" name="platform/prebuilts/maven_repo/android" groups="pdk-cw-fs,pdk-fs" />
   <project path="prebuilts/misc" name="platform/prebuilts/misc" groups="pdk" />
   <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" />
-  <project path="prebuilts/python/darwin-x86/2.7.5" name="platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin,pdk,pdk-cw-fs" />
-  <project path="prebuilts/python/linux-x86/2.7.5" name="platform/prebuilts/python/linux-x86/2.7.5" groups="linux,pdk,pdk-cw-fs" />
+  <project path="prebuilts/python/darwin-x86/2.7.5" name="platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin,pdk,pdk-cw-fs,pdk-fs" />
+  <project path="prebuilts/python/linux-x86/2.7.5" name="platform/prebuilts/python/linux-x86/2.7.5" groups="linux,pdk,pdk-cw-fs,pdk-fs" />
   <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
-  <project path="system/bt" name="system_bt" remote="aospb" />
-  <project path="system/core" name="system_core" remote="aospb" />
-  <project path="system/extras" name="system_extras" remote="aospb" />
+  <project path="system/bt" name="system_bt" remote="aospb" groups="pdk" />
+  <project path="system/core" name="system_core" remote="aospb" groups="pdk" />
+  <project path="system/extras" name="system_extras" remote="aospb" groups="pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
-  <project path="system/keymaster" name="system_keymaster" remote="aospb" />
-  <project path="system/media" name="system_media" remote="aospb" />
-  <project path="system/netd" name="system_netd" remote="aospb" />
-  <project path="system/qcom" name="system_qcom" remote="aospb" />
-  <project path="system/security" name="system_security" remote="aospb" />
-  <project path="system/vold" name="system_vold" remote="aospb" />
+  <project path="system/keymaster" name="system_keymaster" remote="aospb" groups="pdk" />
+  <project path="system/media" name="system_media" remote="aospb" groups="pdk" />
+  <project path="system/netd" name="system_netd" remote="aospb" groups="pdk" />
+  <project path="system/qcom" name="system_qcom" remote="aospb" groups="pdk" />
+  <project path="system/security" name="system_security" remote="aospb" groups="pdk" />
+  <project path="system/vold" name="system_vold" remote="aospb" groups="pdk" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
